@@ -79,14 +79,13 @@
 </head>
 <body>
   <main>
+    <!-- start posts -->
     <section class="posts">{block:Posts}
       <!-- NPF & legacy text -->
       {block:Text}
         <article id="{PostID}" class="post text">
           <div class="caption">
-            {block:Title}
-              <h2><a href="{Permalink}">{Title}</a></h2>
-            {/block:Title}
+            {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
             {block:NotReblog}
               <div class="inner">{Body}</div>
             {/block:NotReblog}
@@ -173,7 +172,7 @@
           </div>
         </article>
       {/block:Photoset}
-      <!--Legacy Video Posts-->
+      <!-- legacy video -->
       {block:Video}
         <article id="{PostID}" class="post video">
           <div class="vid">{Video-500}</div>
@@ -266,7 +265,7 @@
           </div>
         </article>
       {/block:Link}
-      <!-- legacy chat-->
+      <!-- legacy chat -->
       {block:Chat}
         <article id="{PostID}" class="post chat">
           {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
@@ -278,6 +277,7 @@
         </article>
       {/block:Chat}
     {/block:Posts}</section>
+    <!-- end posts -->
     {block:Pagination}
       <div class="pagination">
         {block:PreviousPage}<a href="{PreviousPage}">back</a>{/block:PreviousPage}
